@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:background="@color/dark_theme">
+
+    <!-- Level - 1 -->
+    <RelativeLayout
+        android:id="@+id/level_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/main_pad"
+            android:layout_alignParentTop="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Greet and show credits -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginTop="-10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Hello,"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/greet_font_size"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/show_first_name"
+                            android:layout_marginTop="-5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Unknown!"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/greet_font_size"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentEnd="true">-->
+<!--                        <androidx.cardview.widget.CardView-->
+<!--                            android:layout_width="115dp"-->
+<!--                            android:layout_height="35dp"-->
+<!--                            app:cardCornerRadius="10dp"-->
+<!--                            android:backgroundTint="#333333">-->
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:orientation="horizontal">-->
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_width="50dp"-->
+<!--                                    android:layout_height="match_parent">-->
+<!--                                    <ImageView-->
+<!--                                        android:layout_width="23dp"-->
+<!--                                        android:layout_height="23dp"-->
+<!--                                        android:layout_centerInParent="true"-->
+<!--                                        android:src="@drawable/coin_icon" />-->
+<!--                                </RelativeLayout>-->
+<!--                                <RelativeLayout-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="match_parent">-->
+<!--                                    <TextView-->
+<!--                                        android:id="@+id/show_credit"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="20dp"-->
+<!--                                        android:layout_centerInParent="true"-->
+<!--                                        android:fontFamily="@font/poppins"-->
+<!--                                        android:text="NA"-->
+<!--                                        android:textColor="@color/white"-->
+<!--                                        android:textSize="16sp" />-->
+<!--                                </RelativeLayout>-->
+<!--                            </LinearLayout>-->
+<!--                        </androidx.cardview.widget.CardView>-->
+<!--                    </RelativeLayout>-->
+                </RelativeLayout>
+
+                <!-- Show input box -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/gradient1"
+                    android:padding="1dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="10dp"
+                        android:backgroundTint="@color/dark_theme">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="5dp">
+                                <EditText
+                                    android:id="@+id/input_query"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="95dp"
+                                    android:lines="8"
+                                    android:maxLines="10"
+                                    android:inputType="text|textMultiLine"
+                                    android:gravity="top"
+                                    android:hint="Enter your creative vision"
+                                    android:textColor="@color/white"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14sp"
+                                    android:background="@null"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/generate_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/gradient2"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/poppins"
+                                        android:text="Generate"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <!-- Show Tag Line -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="25dp">
+                    <TextView
+                        android:id="@+id/tag_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transform"
+                        android:textSize="@dimen/tag_font_size"
+                        android:fontFamily="@font/abril"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/tag_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Words"
+                        android:textSize="@dimen/tag_font_size"
+                        android:fontFamily="@font/abril"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/tag_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="into"
+                        android:textSize="@dimen/tag_font_size"
+                        android:fontFamily="@font/abril"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/tag_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Art!"
+                        android:textSize="@dimen/tag_font_size"
+                        android:fontFamily="@font/abril"
+                        android:textColor="@color/white"
+                        android:paddingBottom="100dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <!-- Fixed display ad -->
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/banner_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="ca-app-pub-8878970959944694/9760809790"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+
+    <!-- Level- 2 -->
+    <LinearLayout
+        android:id="@+id/level_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.Circle"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            app:SpinKit_Color="#BBBBBB" />
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generating"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <!-- Level - 3 -->
+    <RelativeLayout
+        android:id="@+id/level_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/main_pad">
+        <RelativeLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="475dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="275dp"
+                android:layout_height="400dp"
+                app:cardCornerRadius="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true">
+                <ImageView
+                    android:id="@+id/result_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="275dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+                <!-- Download: 0dp -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/download_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#333333"
+                    app:cardCornerRadius="10dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/download_icon" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Whatsapp: 75dp -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/whatsapp_share"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#333333"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginStart="75dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/whatsapp_icon"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Instagram: 150dp -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/instagram_share"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#333333"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginStart="150dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/instagram_icon"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- More: 225dp -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/more_options"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#333333"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginStart="225dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/more_icon"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="525dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:fontFamily="@font/abril"
+                android:textSize="50sp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+
+<!--        <com.google.android.gms.ads.AdView-->
+<!--            xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--            android:id="@+id/banner_ad2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            ads:adSize="SMART_BANNER"-->
+<!--            ads:adUnitId="ca-app-pub-8878970959944694/9760809790"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_centerHorizontal="true">-->
+<!--        </com.google.android.gms.ads.AdView>-->
+    </RelativeLayout>
+
+
+
+    <!-- Ad load spinner -->
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/ad_spinner"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/white"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

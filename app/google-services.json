@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "562037412778",
+    "project_id": "open-firebase-2023",
+    "storage_bucket": "open-firebase-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562037412778:android:69793aca3688aa256611d3",
+        "android_client_info": {
+          "package_name": "com.pixoai.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562037412778-n3o6ba7betts0vc4vt54tg3a1d7am3j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG3OUEI3-HwD_fD4rPM6EzCzqTZGWdO9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562037412778-n3o6ba7betts0vc4vt54tg3a1d7am3j8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

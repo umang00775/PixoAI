@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PixoAI</string>
+
+    <string name="tag_line">Transform words into arts</string>
+
+    <string name="built_in_india">Made with &#x2764; in India</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+</resources>
