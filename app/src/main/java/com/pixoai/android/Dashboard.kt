@@ -384,9 +384,6 @@ class Dashboard : AppCompatActivity() {
             level1.alpha = 1f
         }
 
-//        val mDisplayMetrics = windowManager.currentWindowMetrics
-//            val mDisplayWidth = mDisplayMetrics.bounds.width()
-//            val mDisplayHeight = mDisplayMetrics.bounds.height()
 
         val mLayoutParams = WindowManager.LayoutParams()
         mLayoutParams.width =  975 /* 975 */
@@ -439,12 +436,8 @@ class Dashboard : AppCompatActivity() {
 
         creditRef.setValue(newCredit)
             .addOnSuccessListener {
-                // Credit value updated successfully
-//                Log.d(TAG, "Credit value updated successfully")
             }
             .addOnFailureListener { exception ->
-                // Failed to update credit value
-//                Log.e(TAG, "Failed to update credit value: ${exception.message}")
             }
     }
 
@@ -546,19 +539,3 @@ class Dashboard : AppCompatActivity() {
         return file
     }
 }
-
-
-//<!-- :) -->
-//<!--            <RelativeLayout-->
-//<!--                android:layout_width="match_parent"-->
-//<!--                android:layout_height="wrap_content"-->
-//<!--                android:layout_marginTop="50dp">-->
-//<!--                <TextView-->
-//<!--                    android:layout_width="wrap_content"-->
-//<!--                    android:layout_height="wrap_content"-->
-//<!--                    android:fontFamily="@font/poppins"-->
-//<!--                    android:text="@string/built_in_india"-->
-//<!--                    android:textColor="@color/white"-->
-//<!--                    android:textSize="16sp"-->
-//<!--                    android:layout_centerInParent="true"/>-->
-//<!--            </RelativeLayout>-->
